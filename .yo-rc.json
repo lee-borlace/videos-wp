@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "videos-wp",
+    "framework": "react",
+    "version": "1.0.2",
+    "libraryId": "fcdfd66a-a2e3-43c7-87e1-cb1a632e3a62"
+  }
+}

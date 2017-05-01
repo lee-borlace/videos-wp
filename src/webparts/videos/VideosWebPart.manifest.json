@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "cdd96cf2-5f95-44dd-b917-57bb1f7081ee",
+  "alias": "VideosWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "cdd96cf2-5f95-44dd-b917-57bb1f7081ee",
+    "group": { "default": "Under Development" },
+    "title": { "default": "Videos" },
+    "description": { "default": "Videos description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Videos"
+    }
+  }]
+}

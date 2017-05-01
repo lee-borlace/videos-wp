@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "videos-wp-client-side-solution",
+    "id": "fcdfd66a-a2e3-43c7-87e1-cb1a632e3a62",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/videos-wp.sppkg"
+  }
+}
