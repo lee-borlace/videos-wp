@@ -1,3 +1,5 @@
 export interface IVideosProps {
-  description: string;
+  videosServerRelativeUrl: string;
+  focusedVideoKeyword: string;
+  primaryVideoKeyword: string;
 }

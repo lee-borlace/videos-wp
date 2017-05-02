@@ -1,7 +1,15 @@
 declare interface IVideosStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
-  DescriptionFieldLabel: string;
+  
+  VideosServerRelativeUrlFieldLabel: string;
+  VideosServerRelativeUrlFieldDesc: string;
+  
+  FocusedVideoKeywordFieldLabel: string;
+  FocusedVideoKeywordFieldDesc: string;
+  
+  PrimaryVideoKeywordFieldLabel: string;
+  PrimaryVideoKeywordFieldDesc: string;
 }
 
 declare module 'videosStrings' {

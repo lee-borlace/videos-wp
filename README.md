@@ -1,6 +1,8 @@
 ## videos-wp
 
-This is where you include your WebPart documentation.
+
+## Useful Links
+https://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview
 
 ### Building the code
 

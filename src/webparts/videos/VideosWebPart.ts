@@ -15,10 +15,12 @@ import { IVideosWebPartProps } from './IVideosWebPartProps';
 export default class VideosWebPart extends BaseClientSideWebPart<IVideosWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IVideosProps > = React.createElement(
+    const element: React.ReactElement<IVideosProps> = React.createElement(
       Videos,
       {
-        description: this.properties.description
+        focusedVideoKeyword: this.properties.focusedVideoKeyword,
+        primaryVideoKeyword: this.properties.primaryVideoKeyword,
+        videosServerRelativeUrl: this.properties.videosServerRelativeUrl
       }
     );
 
@@ -40,8 +42,17 @@ export default class VideosWebPart extends BaseClientSideWebPart<IVideosWebPartP
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                 PropertyPaneTextField('videosServerRelativeUrl', {
+                  label: strings.VideosServerRelativeUrlFieldLabel,
+                  description: strings.VideosServerRelativeUrlFieldDesc
+                }),
+                PropertyPaneTextField('focusedVideoKeyword', {
+                  label: strings.FocusedVideoKeywordFieldLabel,
+                  description: strings.FocusedVideoKeywordFieldDesc
+                }),
+                PropertyPaneTextField('primaryVideoKeyword', {
+                  label: strings.PrimaryVideoKeywordFieldLabel,
+                  description: strings.PrimaryVideoKeywordFieldDesc
                 })
               ]
             }
