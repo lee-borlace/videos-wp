@@ -1,6 +1,6 @@
 {
   "workingDir": "./temp/deploy/",
-  "account": "<!-- STORAGE ACCOUNT NAME -->",
+  "account": "lrbspfxsamplevideos",
   "container": "videos-wp",
-  "accessKey": "<!-- ACCESS KEY -->"
+  "accessKey": "MTL+nF4PIsXcPLxrahTlUzQBspKOZMvLXeE7pKf+R3jov2GRbQbMMgIBPALBxNxWb3vL7xYejQ5wRZnlRYAS2A=="
 }
