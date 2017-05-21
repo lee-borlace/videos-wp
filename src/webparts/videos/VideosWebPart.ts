@@ -20,9 +20,12 @@ export default class VideosWebPart extends BaseClientSideWebPart<IVideosWebPartP
       {
         focusedVideoKeyword: this.properties.focusedVideoKeyword,
         primaryVideoKeyword: this.properties.primaryVideoKeyword,
-        videosServerRelativeUrl: this.properties.videosServerRelativeUrl
+        videosServerRelativeUrl: this.properties.videosServerRelativeUrl,
+        webPartContext: this.context
       }
     );
+
+    this.context
 
     ReactDom.render(element, this.domElement);
   }
