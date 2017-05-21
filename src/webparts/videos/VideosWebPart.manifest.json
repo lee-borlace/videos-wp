@@ -11,10 +11,12 @@
     "groupId": "cdd96cf2-5f95-44dd-b917-57bb1f7081ee",
     "group": { "default": "Under Development" },
     "title": { "default": "Videos" },
-    "description": { "default": "Videos description" },
+    "description": { "default": "SPFX Web part to show primary and secondary highlighted videos." },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Videos"
+      "videosServerRelativeUrl": "Videos",
+      "focusedVideoKeyword": "Focused Video",
+      "primaryVideoKeyword": "Primary Video"
     }
   }]
 }

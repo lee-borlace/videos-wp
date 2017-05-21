@@ -8,26 +8,23 @@ import {
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'videosStrings';
-import Videos from './components/Videos';
-import { IVideosProps } from './components/IVideosProps';
+import { Videos, IVideosProps } from './components/Videos';
 import { IVideosWebPartProps } from './IVideosWebPartProps';
+
 
 export default class VideosWebPart extends BaseClientSideWebPart<IVideosWebPartProps> {
 
   public render(): void {
+  
     const element: React.ReactElement<IVideosProps> = React.createElement(
       Videos,
       {
-        focusedVideoKeyword: this.properties.focusedVideoKeyword,
-        primaryVideoKeyword: this.properties.primaryVideoKeyword,
-        videosServerRelativeUrl: this.properties.videosServerRelativeUrl,
-        webPartContext: this.context
+        
       }
     );
 
-    this.context
-
     ReactDom.render(element, this.domElement);
+
   }
 
   protected get dataVersion(): Version {

@@ -1,5 +1,5 @@
 export interface IVideosWebPartProps {
-  videosServerRelativeUrl: string;
+  videosSiteRelativeUrl: string;
   focusedVideoKeyword: string;
   primaryVideoKeyword: string;
 }
