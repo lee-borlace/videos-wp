@@ -3,8 +3,12 @@ import styles from './Videos.module.scss';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { Spinner, SpinnerType } from 'office-ui-fabric-react/lib/Spinner';
 
+import { Video } from './Video';
+
 import { IVideo } from '../../../model/IVideo';
 import { MockVideoService } from '../../../services/MockVideoService';
+import { Factory } from '../../../Factory';
+
 
 export interface IVideosProps {
 
@@ -17,32 +21,40 @@ export interface IVideosState {
 }
 
 export class Videos extends React.Component<IVideosProps, IVideosState> {
-  
-   constructor() {
-        super();
 
-        this.state = {
-            primaryVideo: null,
-            secondaryVideos: [],
-            isLoading: true,
-        };
-    }
+  constructor() {
+    super();
 
-  componentDidMount() {
-      new MockVideoService().GetVideos().then(videos => {
-          this.setState({
-              primaryVideo: null,
-              secondaryVideos: videos,
-              isLoading: false
-          }); 
-      });
+    this.state = {
+      primaryVideo: null,
+      secondaryVideos: [],
+      isLoading: true,
+    };
   }
 
-  public render() : React.ReactElement<IVideosProps> {
-    
-    if(!this.state.isLoading) {
+  componentDidMount() {
+    Factory.GetVideoService().GetVideos().then(videos => {
+      this.setState({
+        primaryVideo: null,
+        secondaryVideos: videos,
+        isLoading: false
+      });
+    });
+  }
+
+  public render(): React.ReactElement<IVideosProps> {
+
+    const videos = this.state.secondaryVideos.map((video) =>
+      <Video
+        key={video.Id}
+        video={video}
+      ></Video>
+    );
+
+
+    if (!this.state.isLoading) {
       return (
-        <div>Videos go here...</div>
+        <div>{videos}</div>
       );
     }
     else {

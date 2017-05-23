@@ -1,7 +1,8 @@
 import { IVideo } from '../model/IVideo';
 import { IVideoService } from './IVideoService';
 
-export class MockVideoService implements IVideoService {
+// TODO - use concrete stuff.
+export class SPVideoService implements IVideoService {
 
     private _items: IVideo[] = [{
         Id: 1,
