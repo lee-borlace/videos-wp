@@ -11,15 +11,22 @@ import * as strings from 'videosStrings';
 import { Videos, IVideosProps } from './components/Videos';
 import { IVideosWebPartProps } from './IVideosWebPartProps';
 
+import { IVideoService } from '../../services/IVideoService';
+
+import { Factory } from '../../Factory';
 
 export default class VideosWebPart extends BaseClientSideWebPart<IVideosWebPartProps> {
 
+  constructor() {
+    super();
+  }
+
   public render(): void {
-  
+
     const element: React.ReactElement<IVideosProps> = React.createElement(
       Videos,
       {
-        
+        spVideoService: Factory.GetVideoService(this.context)
       }
     );
 

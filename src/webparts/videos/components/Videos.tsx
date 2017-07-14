@@ -6,12 +6,10 @@ import { Spinner, SpinnerType } from 'office-ui-fabric-react/lib/Spinner';
 import { Video } from './Video';
 
 import { IVideo } from '../../../model/IVideo';
-import { MockVideoService } from '../../../services/MockVideoService';
-import { Factory } from '../../../Factory';
-
+import { IVideoService } from '../../../services/IVideoService';
 
 export interface IVideosProps {
-
+  spVideoService : IVideoService;  
 }
 
 export interface IVideosState {
@@ -33,7 +31,7 @@ export class Videos extends React.Component<IVideosProps, IVideosState> {
   }
 
   componentDidMount() {
-    Factory.GetVideoService().GetVideos().then(videos => {
+    this.props.spVideoService.GetVideos().then(videos => {
       this.setState({
         primaryVideo: null,
         secondaryVideos: videos,
